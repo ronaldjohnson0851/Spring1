@@ -7,9 +7,15 @@ http://www.springframework.org/schema/beans/spring-beans.xsd
 http://www.springframework.org/schema/util
 http://www.springframework.org/schema/util/spring-util.xsd"> <!-- bean
 definitions here -->
-    <bean id="alien" class="org.ron.Alien">
+<!--     <bean id="alien1" class="org.ron.Alien" scope="prototype">-->
+<!--    </bean>-->
+    <bean id="alien1" class="org.ron.Alien" >
+        <property name="age" value="21"></property>
+        <property name="lap" ref="lap1"></property>
+    </bean>
 
 
+    <bean id="lap1" class="org.ron.Laptop">
     </bean>
 
 </beans>
